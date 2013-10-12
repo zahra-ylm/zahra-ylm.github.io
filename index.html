@@ -1,13 +1,34 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>WebSite Designing</title>
 		<meta charset="UTF-8">
+		<title>WebSite Designing</title>
 		<link rel="stylesheet" href="css/fontello.css" />
 		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
-		<div class="header">
-			<div class="box"><p>WebSite Design</p></div>
-		</div>
+		<header class="header">
+			<canvas id="myCanvas" width="269" height="140" class="box">Your browser does not support the HTML5 canvas tag.</canvas>
+		</header>
 	</body>
+	<footer>
+		<script>
+			//convas
+			var c=document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+
+			// Create gradient
+			var grd=ctx.createLinearGradient(0,0,0,170);
+			grd.addColorStop(0,"#630304");
+			grd.addColorStop(1,"white");
+
+			// Fill with gradient
+			ctx.fillStyle=grd;
+			ctx.fillRect(0,0,269,140);
+			//font box
+			ctx.font="30px Arial";
+			ctx.strokeText("WebSite Design",20,125);	
+		</script>
+	</footer>
 </html>
